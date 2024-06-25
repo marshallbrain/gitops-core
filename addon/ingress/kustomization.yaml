@@ -5,4 +5,4 @@ resources:
   - cloudflare.yaml
   - certificate.yaml
   - issuer.yaml
-  - routes/*.yaml
+  - routes/argocd.yaml
