@@ -1,11 +1,12 @@
-replicaCount: 1
-extraArgs:
-  - --dns01-recursive-nameservers=1.1.1.1:53
-  - --dns01-recursive-nameservers-only
-podDnsPolicy: None
-podDnsConfig:
-  nameservers:
-    - 1.1.1.1
+cert-manager:
+  replicaCount: 1
+  extraArgs:
+    - --dns01-recursive-nameservers=1.1.1.1:53
+    - --dns01-recursive-nameservers-only
+  podDnsPolicy: None
+  podDnsConfig:
+    nameservers:
+      - 1.1.1.1
 
-crds:
-  enabled: true
+  crds:
+    enabled: true
