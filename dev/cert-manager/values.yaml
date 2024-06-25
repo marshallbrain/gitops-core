@@ -10,3 +10,6 @@ cert-manager:
 
   crds:
     enabled: true
+
+  webhook:
+    securePort: 10260
