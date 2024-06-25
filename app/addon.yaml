@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: core
+  name: addon
   namespace: argocd
 spec:
   goTemplate: true
@@ -21,6 +21,10 @@ spec:
         repoURL: https://github.com/marshallbrain/homelab-gitops.git
         targetRevision: develop
         path: "{{ .path.path }}"
+        plugin:
+          env:
+            - name: AVP_TYPE
+              value: kubernetessecret
       destination:
         server: https://kubernetes.default.svc
         namespace: "{{ .path.basename }}"
