@@ -60,6 +60,7 @@ traefik:
       kind: Middleware
       metadata:
         name: default-headers
+        namespace: ingress
       spec:
         headers:
           browserXssFilter: true
