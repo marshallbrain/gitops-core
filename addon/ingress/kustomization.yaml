@@ -6,3 +6,4 @@ resources:
   - certificate.yaml
   - issuer.yaml
   - routes/argocd.yaml
+  - tlsstore.yaml
