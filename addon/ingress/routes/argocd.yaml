@@ -10,11 +10,11 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`argocd.<path:gitops:base#domain>`)
+    - match: Host(`carbon.<path:gitops:base#domain>`)
       kind: Rule
       services:
         - name: argocd-server
           port: 443
-      # middlewares:
-      #   - name: default-headers
-      #     namespace: ingress
+      middlewares:
+        - name: default-headers
+          namespace: ingress
