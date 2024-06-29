@@ -23,7 +23,7 @@ spec:
         path: "{{ .path.path }}"
       destination:
         server: https://kubernetes.default.svc
-        namespace: "{{index .path 0}}"
+        namespace: "{{index .path.segments 0}}"
       syncPolicy:
         automated:
           prune: true
