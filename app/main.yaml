@@ -23,7 +23,7 @@ spec:
         path: "{{ .path.path }}"
       destination:
         server: https://kubernetes.default.svc
-        namespace: "{{ .path.basename }}"
+        namespace: "{{index .path 0}}"
       syncPolicy:
         automated:
           prune: true
@@ -33,7 +33,7 @@ spec:
           backoff:
             duration: 1m
             factor: 2
-            maxDuration: 16m
+            maxDuration: 3m
         syncOptions:
           - CreateNamespace=true
           - ApplyOutOfSyncOnly=true
