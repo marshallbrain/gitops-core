@@ -105,7 +105,7 @@ kube-prometheus-stack:
             targetLabel: kubernetes_node
 
   nodeExporter:
-    enabled: true
+    enabled: false
     serviceMonitor:
       relabelings:
         - action: replace
