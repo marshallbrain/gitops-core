@@ -38,3 +38,8 @@ spec:
           - CreateNamespace=true
           - ApplyOutOfSyncOnly=true
           - ServerSideApply=true
+      ignoreDifferences:
+        - group: ""
+          kind: Service
+          jqPathExpressions:
+            - .status.loadBalancer.ingress[].ipMode
