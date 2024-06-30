@@ -1,0 +1,25 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: homepage-services
+data:
+  services.yaml: |
+    - a:
+      - Proxmox - Atlas:
+          href: https://atlas.lab.borealis.dev/
+      - Proxmox - Phoenix:
+          href: https://phoenix.lab.borealis.dev/
+    - b:
+      - Opnsense:
+          href: https://polaris.lab.borealis.dev/
+      - Pi-hole:
+          href: https://hydrogen.lab.borealis.dev/
+      - Unifi:
+          href: https://fluorine.lab.borealis.dev/
+    - c:
+      - Truenas:
+          href: https://vega.lab.borealis.dev/
+      - Argocd:
+          href: https://carbon.lab.borealis.dev/
+    

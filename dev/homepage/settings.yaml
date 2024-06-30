@@ -1,0 +1,27 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: homepage-settings
+data:
+  settings.yaml: |
+    title: Borealis
+    theme: dark
+    hideVersion: true
+    headerStyle: clean
+    # background:
+    #   image: /images/background.jpeg
+    #   cardBlur: sm
+    layout:
+      a:
+        header: false
+        style: row
+        columns: 2
+      c:
+        header: false
+        style: row
+        columns: 2
+      b:
+        header: false
+        style: row
+        columns: 3
