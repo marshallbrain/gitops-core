@@ -72,7 +72,7 @@ kube-prometheus-stack:
     enabled: false
 
   kubeEtcd:
-    enabled: true
+    enabled: false
     endpoints: # ips of servers
       - 192.168.10.21
     service:
