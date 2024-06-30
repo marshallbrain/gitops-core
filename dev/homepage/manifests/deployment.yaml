@@ -5,8 +5,13 @@ metadata:
 spec:
   revisionHistoryLimit: 3
   replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: homepage
   template:
-    spec:
+    metadata:
+      labels:
+        app.kubernetes.io/name: homepage
       containers:
         - name: homepage
           image: "ghcr.io/benphelps/homepage:v0.6.10"
