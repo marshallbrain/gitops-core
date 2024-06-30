@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: homepage
-          image: "ghcr.io/benphelps/homepage:v0.6.10"
+          image: "ghcr.io/benphelps/homepage:v0.9.2"
           ports:
             - name: http
               containerPort: 3000
