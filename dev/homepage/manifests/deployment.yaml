@@ -12,6 +12,7 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: homepage
+    spec:
       containers:
         - name: homepage
           image: "ghcr.io/benphelps/homepage:v0.6.10"
