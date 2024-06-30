@@ -4,6 +4,6 @@ kind: Kustomization
 resources:
   - services.yaml
   - settings.yaml
-  - manifests/blank.yaml
+  - blank.yaml
   - manifests/deployment.yaml
   - manifests/ingress.yaml
