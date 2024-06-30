@@ -1,3 +1,4 @@
+kube-prometheus-stack:
   fullnameOverride: prometheus
 
   defaultRules:
