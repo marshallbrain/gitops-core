@@ -37,18 +37,18 @@ kube-prometheus-stack:
       enabled: false
 
   grafana:
-    enabled: true
-    fullnameOverride: grafana
-    forceDeployDatasources: false
-    forceDeployDashboards: false
-    defaultDashboardsEnabled: true
-    defaultDashboardsTimezone: utc
-    serviceMonitor:
-      enabled: true
-    admin:
-      existingSecret: grafana-admin
-      userKey: admin-user
-      passwordKey: admin-password
+    enabled: false
+    # fullnameOverride: grafana
+    # forceDeployDatasources: false
+    # forceDeployDashboards: false
+    # defaultDashboardsEnabled: true
+    # defaultDashboardsTimezone: utc
+    # serviceMonitor:
+    #   enabled: true
+    # admin:
+    #   existingSecret: grafana-admin
+    #   userKey: admin-user
+    #   passwordKey: admin-password
 
   kubeApiServer:
     enabled: true
@@ -72,7 +72,7 @@ kube-prometheus-stack:
     enabled: false
 
   kubeEtcd:
-    enabled: false
+    enabled: true
     endpoints: # ips of servers
       - 192.168.10.21
     service:
@@ -105,7 +105,7 @@ kube-prometheus-stack:
             targetLabel: kubernetes_node
 
   nodeExporter:
-    enabled: false
+    enabled: true
     serviceMonitor:
       relabelings:
         - action: replace
@@ -116,6 +116,7 @@ kube-prometheus-stack:
           targetLabel: kubernetes_node
 
   prometheus-node-exporter:
+    namespaceOverride: "node-exporter"
     fullnameOverride: node-exporter
     podLabels:
       jobLabel: node-exporter
