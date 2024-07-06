@@ -37,18 +37,18 @@ kube-prometheus-stack:
       enabled: false
 
   grafana:
-    enabled: false
-    # fullnameOverride: grafana
-    # forceDeployDatasources: false
-    # forceDeployDashboards: false
-    # defaultDashboardsEnabled: true
-    # defaultDashboardsTimezone: utc
-    # serviceMonitor:
-    #   enabled: true
-    # admin:
-    #   existingSecret: grafana-admin
-    #   userKey: admin-user
-    #   passwordKey: admin-password
+    enabled: true
+    fullnameOverride: grafana
+    forceDeployDatasources: false
+    forceDeployDashboards: false
+    defaultDashboardsEnabled: true
+    defaultDashboardsTimezone: utc
+    serviceMonitor:
+      enabled: true
+    admin:
+      existingSecret: grafana-admin
+      userKey: admin-user
+      passwordKey: admin-password
 
   kubeApiServer:
     enabled: true
@@ -164,6 +164,10 @@ kube-prometheus-stack:
       retention: 7d
       enableAdminAPI: true
       walCompression: true
+    service:
+      loadBalancerIP: "192.168.10.102"
+      loadBalancerSourceRanges: []
+      type: LoadBalancer
 
   thanosRuler:
     enabled: false
