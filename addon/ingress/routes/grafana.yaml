@@ -10,7 +10,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`neon.<path:gitops:base#domain>`)
+    - match: Host(`grafana.<path:gitops:base#domain>`)
       kind: Rule
       services:
         - name: grafana
