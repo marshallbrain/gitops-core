@@ -15,6 +15,6 @@ spec:
       services:
         - name: argocd-server
           port: 443
-      middlewares:
-        - name: default-headers
-          namespace: core
+      # middlewares:
+      #   - name: default-headers
+      #     namespace: core

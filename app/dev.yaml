@@ -19,7 +19,7 @@ spec:
       project: default
       source:
         repoURL: https://github.com/marshallbrain/homelab-gitops.git
-        targetRevision: "app/{{ .path.basename }}"
+        targetRevision: "dev/{{ .path.basename }}"
         path: "{{ .path.path }}"
       destination:
         server: https://kubernetes.default.svc
