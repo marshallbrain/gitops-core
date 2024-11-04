@@ -9,7 +9,7 @@ spec:
   generators:
     - git:
         repoURL: https://github.com/marshallbrain/homelab-gitops.git
-        revision: develop
+        revision: HEAD
         directories:
           - path: addon/*
   template:
@@ -19,7 +19,7 @@ spec:
       project: default
       source:
         repoURL: https://github.com/marshallbrain/homelab-gitops.git
-        targetRevision: develop
+        targetRevision: HEAD
         path: "{{ .path.path }}"
         plugin:
           env:
