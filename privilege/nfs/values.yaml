@@ -3,4 +3,4 @@ csi-driver-nfs:
     enabled: true
   controller:
     runOnControlPlane: true
-    replicas: 2
+    replicas: 1
