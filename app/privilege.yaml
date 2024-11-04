@@ -23,11 +23,11 @@ spec:
         path: "{{ .path.path }}"
       destination:
         server: https://kubernetes.default.svc
-        namespace:
-          name: "{{index .path.segments 0}}"
+        namespace: "{{index .path.segments 0}}"
+      syncPolicy:
+        managedNamespaceMetadata:
           addLabels:
             pod-security.kubernetes.io/enforce: privileged
-      syncPolicy:
         automated:
           prune: true
           selfHeal: true
