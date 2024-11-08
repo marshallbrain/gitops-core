@@ -9,7 +9,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`chromium.<path:gitops:base#domain>`)
+    - match: Host(`chromium.<path:gitops:ingress#domain>`)
       kind: Rule
       middlewares:
         - name: immich-redirect
@@ -23,5 +23,5 @@ metadata:
   name: immich-redirect
 spec:
   redirectRegex:
-    regex: ^https://chromium.<path:gitops:base#domain>/?$
-    replacement: https://chromium.<path:gitops:base#domain>/search?query=%7B"model"%3A"General"%7D
+    regex: ^https://chromium.<path:gitops:ingress#domain>/?$
+    replacement: https://chromium.<path:gitops:ingress#domain>/search?query=%7B"model"%3A"General"%7D

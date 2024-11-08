@@ -52,10 +52,10 @@ spec:
       volumes:
         - name: collections
           nfs:
-            server: <path:gitops:base#domain_nas>
-            path: /mnt/<path:gitops:base#nas>/immich/collections
+            server: <path:gitops:storage#domain_nas>
+            path: <path:gitops:storage#nas>/immich/collections
             readOnly: true
         - name: upload
           nfs:
-            server: <path:gitops:base#domain_nas>
-            path: /mnt/<path:gitops:base#nas>/immich/upload
+            server: <path:gitops:storage#domain_nas>
+            path: <path:gitops:storage#nas>/immich/upload
