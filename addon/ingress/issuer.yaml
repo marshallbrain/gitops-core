@@ -7,16 +7,16 @@ metadata:
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: <path:gitops:base#email>
+    email: <path:gitops:cloudflare#email>
     privateKeySecretRef:
       name: letsencrypt
     solvers:
       - dns01:
           cloudflare:
-            email: <path:gitops:base#email>
+            email: <path:gitops:cloudflare#email>
             apiTokenSecretRef:
               name: cloudflare-secret
               key: cloudflare-token
         selector:
           dnsZones:
-            - "<path:gitops:base#domain_base>"
+            - "<path:gitops:cloudflare#domain_base>"
