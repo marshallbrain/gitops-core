@@ -9,9 +9,16 @@
   },
   "packageRules": [
     {
+      "matchPackageNames": ["immich-server"],
+      "automerge": true
+    },
+    {
       "matchUpdateTypes": ["minor", "patch"],
       "matchCurrentVersion": "!/^0/",
-      "automerge": true
+      "automerge": true,
+      "automergeSchedule": ["* 6-14 * * 0"]
     }
-  ]
+  ],
+  "branchConcurrentLimit": 2,
+  "schedule": ["* 6-14 * * 6"]
 }
