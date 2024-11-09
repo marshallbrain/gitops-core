@@ -15,16 +15,12 @@ spec:
         name: immich
     spec:
       securityContext:
-        # runAsUser: 1200
-        # runAsGroup: 1200
         fsGroup: 1200
         supplementalGroups: [1000]
       containers:
         - name: immich-server
           image: "ghcr.io/immich-app/immich-server:v1.120.1"
           env:
-            - name: TZ
-              value: america/new_york
             - name: REDIS_HOSTNAME
               value: immich-redis-master
             - name: DB_HOSTNAME
