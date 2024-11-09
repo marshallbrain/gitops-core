@@ -22,7 +22,7 @@ spec:
           image: "ghcr.io/immich-app/immich-server:v1.120.1"
           env:
             - name: REDIS_HOSTNAME
-              value: immich-redis-master
+              value: immich-redis-master.operator.svc.cluster.local
             - name: DB_HOSTNAME
               value: immich-postgres-rw
             - name: DB_USERNAME
